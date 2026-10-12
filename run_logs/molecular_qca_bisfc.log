@@ -1,0 +1,40 @@
+=== Bis-ferrocene QCA cell (corrected) ===
+
+1. Alkyl-chain tunnelling decay (beta = 0.9 / CH2):
+    n_CH2    t_DA (eV)
+        0      0.10000
+        2      0.01653
+        4      0.00273
+        6      0.00045
+        8      0.00007
+       10      0.00001
+
+2. Clock-field switching (t_DA = 5 meV):
+     clock (eV)      E0 (eV)        P   electron
+         -0.100     -0.05025  +0.9950          L
+         -0.050     -0.02550  +0.9806          L
+         -0.020     -0.01118  +0.8944          L
+         +0.000     -0.00500  +0.0000      mixed
+         +0.020     -0.01118  -0.8944          R
+         +0.050     -0.02550  -0.9806          R
+         +0.100     -0.05025  -0.9950          R
+
+3. Room-temperature feasibility (T_max = gap / k_B):
+     clock (eV)  gap (meV)        P  T_max (K)
+         +0.005      11.18  -0.4472        130
+         +0.010      14.14  -0.7071        164
+         +0.020      22.36  -0.8944        259
+         +0.050      50.99  -0.9806        592
+         +0.100     100.50  -0.9950       1166
+         +0.200     200.25  -0.9988       2324
+
+4. Redox-window safety check:
+   Ferrocene 1st oxidation ~ +0.40 V vs SCE (~0.64 V vs NHE).
+   Clock field across 1.2 nm: E_field = dE / 1.2 nm
+   clock =    20 meV -> E = 0.017 V/nm
+   clock =    50 meV -> E = 0.042 V/nm
+   clock =   100 meV -> E = 0.083 V/nm
+   clock =   200 meV -> E = 0.167 V/nm
+
+   Below ~0.5 V/nm the ferrocene redox couple is intact.
+   200 meV / 1.2 nm = 0.167 V/nm -- safely inside the window.

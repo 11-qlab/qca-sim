@@ -1,0 +1,12 @@
+=== QCA surrogate: training ===
+
+generating exact data...
+  got 1500 samples
+
+  epoch   50  loss = 0.023536
+  epoch  100  loss = 0.015274
+  epoch  150  loss = 0.013103
+  epoch  200  loss = 0.011681
+
+  MLP RMSE = 0.10795
+  held-out RMSE = 0.10207

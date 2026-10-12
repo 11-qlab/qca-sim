@@ -1,0 +1,41 @@
+=== Native QCA entangling gate ===
+
+1. Concurrence C(Jt) from input |+x,+x>:
+         Jt        C     S(A)
+   --------------------------
+     0.0000   0.0000  -0.0000
+     0.3927   0.7071   0.4165
+     0.7854   1.0000   0.6931
+     1.1781   0.7071   0.4165
+     1.5708   0.0000  -0.0000
+     2.3562   1.0000   0.6931
+     3.1416   0.0000  -0.0000
+
+2. Bell state at Jt = π/4:
+   |++>: +0.3536 +0.3536i
+   |+->: +0.3536 -0.3536i
+   |-+>: +0.3536 -0.3536i
+   |-->: +0.3536 +0.3536i
+   C = 1.0000   S(A) = 0.6931
+
+3. CNOT truth table (direct construction):
+       in     out  expected  ok
+     |00>  |00>  |00>    OK
+     |01>  |01>  |01>    OK
+     |10>  |11>  |11>    OK
+     |11>  |10>  |10>    OK
+   all rows: PASS
+
+4. Verify CNOT = (I⊗H) · CZ · (I⊗H):
+   matches CNOT: True
+
+5. QCA-native decomposition: CZ = Rz_A(α) Rz_B(β) · ZZ(π/4)
+   α = +1.5708, β = +1.5708 radians
+
+6. Bell state prepared by CNOT from |+0>:
+   C = 1.0000   S(A) = 0.6931
+
+Conclusion:
+  QCA-native coupling σz⊗σz (ZZ(π/4)) is LOCALLY EQUIVALENT
+  to CZ, and CZ is EQUIVALENT to CNOT up to single-qubit H.
+  Every QCA wire is a chain of native entangling gates.

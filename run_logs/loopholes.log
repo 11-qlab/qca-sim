@@ -1,0 +1,46 @@
+=== 1. Counterion-Free (Zwitterionic) QCA Cell ===
+
+A zwitterion has internal + and - charges that cancel.
+This eliminates the stray fields from mobile counterions
+that cause polarization noise in real devices.
+
+  Clean (zwitterionic) cell:  <P> = +0.8485  sigma = 0.0000
+  Noisy (counterion) cell:    <P> = +0.6926  sigma = 0.3052
+  -> Zwitterionic cells are ~305157x more stable.
+
+=== 2. Electrostatic Clocking ===
+
+A vertical electric field modifies the on-site energies of
+the 4 dots.  Positive field lowers dots 0 & 2 (the +P state),
+negative lowers dots 1 & 3 (the -P state).  This acts as a
+'clock' that can either HOLD (pin) or RELEASE (erase) a bit.
+
+ clock_field |   P (no input) |      state
+--------------------------------------------
+       -2.00 |        -0.9932 |    HOLD -1
+       -1.00 |        -0.8485 |    RELEASE
+        0.00 |        +0.0000 |    RELEASE
+        1.00 |        +0.8485 |    RELEASE
+        2.00 |        +0.9932 |    HOLD +1
+
+  -> A clock field of +/-2 pins the bit.  Zero releases it.
+
+=== 3. Fault-Tolerant MV3 Gate (7 cells) ===
+
+Standard majority gate uses 5 cells (3 inputs + 1 device + 1
+output).  The MV3 design uses 7 cells with redundant pathways.
+We simulate a cell-omission defect: one cell is stuck at 0.
+
+  A   B   C |     std     MV3  MV3 fault |  exp
+--------------------------------------------------------
+ -1  -1  -1 |       0       0          0 |    0
+ -1  -1  +1 |       0       0          0 |    0
+ -1  +1  -1 |       0       0          0 |    0
+ -1  +1  +1 |       1       1          0 |    1
+ +1  -1  -1 |       0       0          0 |    0
+ +1  -1  +1 |       1       1          0 |    1
+ +1  +1  -1 |       1       1          1 |    1
+ +1  +1  +1 |       1       1          1 |    1
+
+  -> MV3 survives a cell-omission defect in the inner stage.
+

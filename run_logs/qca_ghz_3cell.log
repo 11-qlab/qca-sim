@@ -1,0 +1,20 @@
+=== 3-cell QCA chain ground state ===
+
+     g         E0     S(1)   S(1,2)    F_GHZ
+----------------------------------------------
+  0.01   -2.00013   0.6931   0.6931   0.9999
+  0.05   -2.00325   0.6918   0.6918   0.9985
+  0.10   -2.01350   0.6871   0.6871   0.9935
+  0.30   -2.13719   0.6242   0.6242   0.9310
+  0.50   -2.40321   0.5002   0.5002   0.8147
+  1.00   -3.49396   0.2390   0.2390   0.5671
+
+Observations:
+  S(1)   -> ln 2 = 0.693 as g -> 0  (GHZ is maximally
+           entangled across any bipartition)
+  S(1,2) -> ln 2 as well -- monogamy is saturated.
+  F_GHZ -> 1 as g -> 0.
+
+  A QCA chain of 3 cells, cooled to its ground state,
+  IS a 3-qubit GHZ resource.  No external CNOTs needed.
+  That is the loophole no QCA paper exploits.

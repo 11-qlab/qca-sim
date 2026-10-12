@@ -1,0 +1,19 @@
+=== QCA hardware run ===
+
+1. Bell state tomography
+  <XX> = +1.0000   <YY> = -1.0000   <ZZ> = +1.0000
+  concurrence (lower bound) = 1.0000
+
+2. GHZ state
+  P(000) = 0.4956   P(111) = 0.5044
+  GHZ fidelity lower bound = 1.0000
+
+3. Logical Bell pair (4 physical qubits)
+  P(q1 == q3) = 1.0000   (ideal 1.0)
+
+Results written to hardware_results.json
+
+Summary for the paper:
+  Bell state  : C >= 1.0000   (ideal 1.0)
+  GHZ state   : F >= 1.0000   (ideal 1.0)
+  Logical Bell: parity = 1.0000   (ideal 1.0)

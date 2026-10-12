@@ -1,0 +1,19 @@
+=== MV3 topologies, t = 0.05 ===
+
+  A   B   C |  std  ser  par |  serF  parF |  exp
+-------------------------------------------------
+ -1  -1  -1 |    0    0    0 |     0     0 |    0
+ -1  -1  +1 |    0    0    0 |     0     0 |    0
+ -1  +1  -1 |    0    0    0 |     0     0 |    0
+ -1  +1  +1 |    1    1    1 |     0     1 |    1
+ +1  -1  -1 |    0    0    0 |     0     0 |    0
+ +1  -1  +1 |    1    1    1 |     0     1 |    1
+ +1  +1  -1 |    1    1    1 |     1     1 |    1
+ +1  +1  +1 |    1    1    1 |     1     1 |    1
+
+  healthy  : serial 8/8   parallel 8/8
+  faulted  : serial 6/8   parallel 8/8
+
+  serial   fails on ties when the inner cell is omitted.
+  parallel survives because the two other pairwise cells
+  still deliver a decisive majority to the device cell.

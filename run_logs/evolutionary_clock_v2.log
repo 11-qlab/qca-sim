@@ -1,0 +1,10 @@
+=== Evolutionary clock v2 (real TDSE fitness) ===
+
+  gen  10  best = -2.141403  mean = -2.331900
+  gen  20  best = -1.985299  mean = -2.323449
+  gen  30  best = -1.985299  mean = -2.323937
+
+Best fitness = -1.985299  (0 = perfect flip)
+P_final with evolved clock  : +0.4090
+P_final with linear clock   : +0.5720
+P_final with constant 1.0   : +0.5872

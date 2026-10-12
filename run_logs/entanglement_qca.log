@@ -1,0 +1,17 @@
+=== Entanglement in a 2-cell QCA system ===
+
+       J           E0       S(A)      P_A      P_B
+--------------------------------------------------
+   0.000     -0.10000   -0.00000  +0.0000  +0.0000
+   0.010     -0.10050    0.01736  +0.0000  +0.0000
+   0.050     -0.11180    0.20664  +0.0000  +0.0000
+   0.100     -0.14142    0.41650  -0.0000  -0.0000
+   0.200     -0.22361    0.58951  +0.0000  +0.0000
+   0.500     -0.50990    0.67379  +0.0000  +0.0000
+   1.000     -1.00499    0.68819  -0.0000  -0.0000
+
+Interpretation:
+  S = 0  : cells are classically correlated (product state)
+  S > 0  : cells are quantum-entangled; the wire is a
+           coherent quantum channel, not a classical one.
+  Max S = ln(2) ~ 0.693 for a maximally entangled pair.

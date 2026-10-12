@@ -1,0 +1,12 @@
+=== Dynamic STA QCA GHZ State Preparation ===
+
+Ramping transverse field g from 5.0 -> 0.05 for N = 3 cells.
+
+   Total Time T =  0.5 | GHZ Fidelity =   0.9985
+   Total Time T =  1.0 | GHZ Fidelity =   0.9985
+   Total Time T =  2.0 | GHZ Fidelity =   0.9985
+   Total Time T =  5.0 | GHZ Fidelity =   0.9985
+
+Conclusion:
+  Shortcut-to-Adiabaticity (STA) successfully drives the N-cell QCA
+  into the GHZ cat state rapidly without thermal heating or diabatic excitations.

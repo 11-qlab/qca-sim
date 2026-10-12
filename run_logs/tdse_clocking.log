@@ -1,0 +1,19 @@
+=== Time-dependent QCA clocking ===
+
+Initial state: ground state with driver = +3  (P = +1)
+Final clock:   driver = -3  (should flip to P = -1)
+
+   T_total       rate    P_final   fidelity
+--------------------------------------------
+      0.50      12.00    +0.9956     0.0022
+      1.00       6.00    +0.9896     0.0052
+      2.00       3.00    +0.9751     0.0124
+      5.00       1.20    +0.9571     0.0215
+     10.00       0.60    +0.8974     0.0513
+     50.00       0.12    +0.5719     0.2140
+    200.00       0.03    -0.2721     0.6360
+
+Interpretation:
+  Fast ramps (T_total << 1): cell cannot follow -> bit corrupted.
+  Slow ramps (T_total >> 1): adiabatic -> clean flip.
+  This sets the maximum clock rate for a QCA device.

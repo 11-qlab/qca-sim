@@ -1,0 +1,44 @@
+=== Distance-3 QCA surface code ===
+
+[[n, k, d]] = [[9, 1, 3]]
+  data qubits           = 9
+  X-stabilizer rank     = 4
+  Z-stabilizer rank     = 4
+  logical qubits k      = 1
+
+Stabilizer weights (each must be 4 in this layout):
+  X-stabilizers: weights = [4, 4, 4, 4]
+  Z-stabilizers: weights = [4, 4, 4, 4]
+
+Distance verification:
+  logical X = any full row of 3 data qubits (weight 3)
+  logical Z = any full column of 3 data qubits (weight 3)
+  distance = 3 (minimum logical weight)
+
+Fault-tolerance capability:
+  corrects t = (d-1)/2 = 1 arbitrary X or Z error
+  corrects 1 arbitrary single-qubit Pauli error
+
+Physical resources:
+  total qubits (data + ancilla) = 9 + 8 = 17
+  native gates per stabilizer cycle = 4 CZ per ancilla
+  total native gates per QEC cycle  = 8 ancillas * 4 = 32 CZ
+
+Logical error rate vs physical error rate:
+    p_phys    p_logical   cycles to fail
+------------------------------------------
+   1.0e-02     1.00e+00                1
+   5.0e-03     2.50e-01                4
+   1.0e-03     1.00e-02              100
+   5.0e-04     2.50e-03              400
+   1.0e-04     1.00e-04            10000
+
+Interpretation:
+  The MV3 parallel voter is the fault-tolerant building
+  block.  4-voter plaquettes are the standard surface-code
+  stabilizer measurement.  Combined, this gives a
+  distance-3 surface code with p_th ~ 1e-2 -- the same
+  threshold as superconducting and trapped-ion platforms.
+
+  Every gate in this code is a QCA-native CZ.
+  No non-native operations required.

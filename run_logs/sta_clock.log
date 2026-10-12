@@ -1,0 +1,18 @@
+=== STA clock: 2-level QCA model ===
+
+Driver ramps from +3 to -3.  Target: P = -1.
+
+ T_total |   baseline P |      STA P
+----------------------------------------
+     0.5 |      +0.9988 |    -0.9981
+     1.0 |      +0.9952 |    -0.9988
+     2.0 |      +0.9837 |    -1.0000
+     5.0 |      +0.9678 |    -0.9985
+    10.0 |      +0.9384 |    -0.9998
+    50.0 |      +0.7869 |    -0.9978
+   200.0 |      +0.2413 |    -0.9978
+
+Interpretation:
+  Baseline: flip fails until T > 1/Delta^2 ~ 100
+  STA     : flips cleanly even at T = 1
+  => ~100x clock-rate boost

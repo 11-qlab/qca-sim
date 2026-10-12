@@ -1,0 +1,10 @@
+=== IBM run: Bell + GHZ + tomography ===
+
+Bell state tomography:
+  <XX> = +1.0000   <YY> = -1.0000   <ZZ> = +1.0000
+  concurrence (Horodecki bound) = 1.0000
+
+GHZ state (3 qubits):
+  top outcomes: [('111', 2085), ('011', 2051), ('000', 2040), ('100', 2016)]
+  P(000) = 0.2490   P(111) = 0.2545
+  GHZ fidelity lower bound = 0.5035

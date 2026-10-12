@@ -1,0 +1,25 @@
+=== Logical CNOT between distance-3 patches ===
+
+Start: |00>_L
+After H_A: <X_A> = +1.0000, <Z_A> = -0.0000
+After CNOT_A->B:
+  <Z_A Z_B> = +1.0000   (ideal +1)
+  <X_A X_B> = +1.0000   (ideal +1)
+  <Z_A>     = -0.0000   (ideal  0)
+  <Z_B>     = -0.0000   (ideal  0)
+
+Truth table (logical basis):
+    in_L   out_L
+  |00>_L -> |00>_L
+  |01>_L -> |01>_L
+  |10>_L -> |11>_L
+  |11>_L -> |10>_L
+
+Logical error rate after n_cycles=100 (p_th=1e-2, d=3):
+      p_phys    p_logical   cycles to fail
+  ------------------------------------------
+     5.0e-03     2.50e+01                0
+     1.0e-03     1.00e+00                1
+     5.0e-04     2.50e-01                4
+     1.0e-04     1.00e-02              100
+     1.0e-05     1.00e-04            10000

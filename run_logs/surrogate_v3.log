@@ -1,0 +1,9 @@
+=== Surrogate v3 ===
+
+  epoch  200  loss = 0.003797
+  epoch  400  loss = 0.001478
+  epoch  600  loss = 0.000850
+
+  train RMSE = 0.02912
+  held-out RMSE = 0.02503
+  max |P_pred| = 0.9837  (must be <= 1)

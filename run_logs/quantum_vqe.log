@@ -1,0 +1,22 @@
+=== QCA cell ground state: exact vs VQE ===
+
+[classical exact] driver=-2.00  E0 = -1.270559  P = -0.8243
+[qiskit] not installed -- install with: pip install qiskit qiskit-aer
+         skipping VQE run; classical result shown above.
+
+[classical exact] driver=-1.00  E0 = -0.600000  P = -0.4571
+[qiskit] not installed -- install with: pip install qiskit qiskit-aer
+         skipping VQE run; classical result shown above.
+
+[classical exact] driver=+0.00  E0 = -0.386483  P = -0.0000
+[qiskit] not installed -- install with: pip install qiskit qiskit-aer
+         skipping VQE run; classical result shown above.
+
+[classical exact] driver=+1.00  E0 = -0.600000  P = +0.4571
+[qiskit] not installed -- install with: pip install qiskit qiskit-aer
+         skipping VQE run; classical result shown above.
+
+[classical exact] driver=+2.00  E0 = -1.270559  P = +0.8243
+[qiskit] not installed -- install with: pip install qiskit qiskit-aer
+         skipping VQE run; classical result shown above.
+

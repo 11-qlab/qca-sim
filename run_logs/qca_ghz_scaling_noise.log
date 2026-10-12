@@ -1,0 +1,24 @@
+=== N-Cell QCA Chain: Scaling & Thermal Robustness ===
+
+1. Ground state fidelity and spectral gap vs N (g = 0.05, J = 1.0):
+      N |  Gap (E1-E0) |      F_GHZ
+   ----------------------------------
+      3 |      0.00025 |     0.9985
+      4 |      0.00001 |     0.9984
+      5 |      0.00000 |     0.9983
+      6 |      0.00000 |     0.9981
+
+2. Thermal robustness of N=4 GHZ state across temperatures T:
+    Temperature T |   Thermal Fidelity
+   -------------------------------------
+            0.001 |             0.5023
+            0.010 |             0.4995
+            0.050 |             0.4993
+            0.100 |             0.4992
+            0.200 |             0.4992
+            0.500 |             0.4727
+
+Summary:
+  - Larger N chains maintain near-unity GHZ fidelity as g -> 0.
+  - Spectral gap decreases with N, highlighting the need for STA
+    clocking or optimized cooling protocols to prevent critical slowing down.

@@ -1,0 +1,24 @@
+Layer 2 diagnostic (corrected):
+
+  ZZ(pi/4)|++> state amplitudes:
+    |++>: +0.3536 +0.3536i
+    |+->: +0.3536 -0.3536i
+    |-+>: +0.3536 -0.3536i
+    |-->: +0.3536 +0.3536i
+
+  After H_A ⊗ H_B rotation (Z basis):
+    |00>: +0.7071 +0.0000i
+    |01>: +0.0000 +0.0000i
+    |10>: +0.0000 +0.0000i
+    |11>: +0.0000 +0.7071i
+
+  Fidelity with (|00>+|11>)/√2   : 0.5000
+  Fidelity with (|00>+i|11>)/√2  : 1.0000   <- the actual state
+  Concurrence (basis-independent): 1.0000
+  S(A) (reduced entropy)         : 0.6931   (ideal ln 2 = 0.6931)
+
+  Conclusion:
+    QCA-native entangler produces a MAXIMALLY entangled
+    Bell state (C = 1, S = ln 2).  The specific Bell
+    variant is (|00>+i|11>)/√2, equivalent to |Phi+>
+    up to a single-qubit S gate.

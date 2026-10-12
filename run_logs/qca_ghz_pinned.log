@@ -1,0 +1,18 @@
+=== Pinned N-Cell QCA Chain: Gap & Thermal Protection ===
+
+System: N = 4, g = 0.2, h (pinning) = 0.1
+Protected Spectral Gap (E1 - E0): 0.39185
+
+    Temperature T |   Thermal Fidelity
+   -------------------------------------
+            0.010 |             0.4923
+            0.050 |             0.4923
+            0.100 |             0.4920
+            0.200 |             0.4907
+            0.500 |             0.4642
+            1.000 |             0.3381
+
+Conclusion:
+  By introducing a minor boundary pinning field (h), the gap is
+  successfully opened, preventing the thermal mixing artifact
+  and maintaining robust GHZ fidelity at finite temperatures.

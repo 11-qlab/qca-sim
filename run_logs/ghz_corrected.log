@@ -1,0 +1,13 @@
+=== 3-qubit GHZ (QCA-native) ===
+
+counts (all non-zero):
+  111:  4101  (0.5006)
+  000:  4091  (0.4994)
+
+P(000) + P(111) = 1.0000   (ideal 1.0)
+GHZ fidelity    = 1.0000
+
+Stabilizer expectations (all should be +1):
+  <XXX> = +1.0000
+  <ZZI> = +1.0000
+  <IZZ> = +1.0000

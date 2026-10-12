@@ -1,0 +1,18 @@
+=== Evolutionary clock optimization ===
+
+Evolving a Fourier-series clock waveform to maximize
+bit propagation through a 5-cell wire with a defect.
+
+  gen  10  best fitness = -1.37049
+  gen  20  best fitness = -1.35115
+  gen  30  best fitness = -1.35115
+  gen  40  best fitness = -1.35115
+
+Best fitness = -1.35115
+Wire polarizations:  ['+1.000', '+0.488', '+0.000', '+0.000', '+0.000']
+
+Baseline (constant |driver| = 1):
+Wire polarizations:  ['+1.000', '+0.848', '+0.000', '+0.000', '+0.000']
+
+Best waveform shape (first 10 samples):
+  [-0.771 -0.817 -0.858 -0.895 -0.926 -0.952 -0.973 -0.988 -0.997 -1.   ]

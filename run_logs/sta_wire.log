@@ -1,0 +1,19 @@
+=== STA QCA wire: minimum clock-edge time ===
+
+Target: flip cell from P=+1 to P=-0.95
+
+  t_hop    Delta |   T_base    T_STA  speedup
+------------------------------------------------
+  0.100    0.200 |   324.26     0.10   3242.6x
+  0.050    0.100 |   500.00     0.10   5000.0x
+  0.020    0.040 |   500.00     0.10   5000.0x
+  0.010    0.020 |   500.00     0.10   5000.0x
+
+Wire throughput = N_cells / (N_cells * T_edge) = 1 / T_edge
+So the STA speedup on T_edge translates directly into
+wire clock-rate speedup.
+
+At t_hop = 0.05 (typical QCA regime):
+  Baseline edge time  : 500.00  ->  P = -0.4022
+  STA edge time       : 0.10  ->  P = -0.9978
+  Clock-rate speedup  : 5000.0x
