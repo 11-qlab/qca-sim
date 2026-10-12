@@ -9,3 +9,8 @@ dist/
 *.bak
 *.old
 *.orig
+*.bak
+*.old
+*.orig
+__pycache__/
+*.pyc
