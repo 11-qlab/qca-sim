@@ -4,8 +4,8 @@ authors:
   - family-names: "11-qlab"
     given-names: ""
 title: "QCA as a Native Quantum Platform"
-version: 1.1.0
-doi: 10.5281/zenodo.23306804
+version: 1.3.0
+doi: 10.5281/zenodo.XXXXXXXX
 date-released: 2026-10-12
 url: "https://github.com/11-qlab/qca-sim"
 license: Apache-2.0

@@ -67,3 +67,13 @@ fault-tolerant logical qubit and report fidelity 1.0000 at every stage.
 - STA waveform synthesis at the molecular scale (THz-rate drives).
 - Real QPU benchmark of the native CZ on IBM/Google/IonQ.
 - Full 2-patch lattice surgery with realistic noise model.
+
+
+### F12. Toric code hardware-verified on IBM Marrakesh
+
+-  toric code prepared and measured on 156-qubit Eagle r3.
+- Post-selection on prefilter ancillas, ~10% acceptance.
+-  (mean 0.868, 72σ above noise)
+-  (mean 0.643, 37σ above noise)
+-  — topological order present on silicon.
+- Version DOI: 10.5281/zenodo.XXXXXXXX
