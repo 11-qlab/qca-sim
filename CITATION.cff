@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+  - family-names: "11-qlab"
+    given-names: ""
+title: "QCA as a Native Quantum Platform"
+version: 0.2.0
+doi: 10.5281/zenodo.XXXXXXX
+date-released: 2026-10-12
+url: "https://github.com/11-qlab/qca-sim"
+license: Apache-2.0

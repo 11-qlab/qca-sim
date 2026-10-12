@@ -8,3 +8,4 @@ version = "0.2.0"
 description = "Quantum-dot Cellular Automata simulator: Hubbard cell exact diagonalization, native quantum gates, STA clocking"
 requires-python = ">=3.10"
 dependencies = ["numpy", "scipy"]
+license = {text = "Apache-2.0"}
