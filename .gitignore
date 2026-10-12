@@ -14,3 +14,9 @@ dist/
 *.orig
 __pycache__/
 *.pyc
+*.log
+toric_hw.log
+toric_*_hw.log
+run_logs/
+*.log
+run_logs/
