@@ -1,0 +1,14 @@
+qca-sim
+Copyright 2026 11-qlab
+
+This product includes software developed at
+11-qlab (https://github.com/11-qlab).
+
+Third-party dependencies (via pip install):
+  - numpy (BSD-3-Clause)
+  - scipy (BSD-3-Clause)
+  - qiskit (Apache-2.0)
+  - qiskit-aer (Apache-2.0)
+  - qiskit-ibm-runtime (Apache-2.0)
+
+See pyproject.toml for the full dependency list.

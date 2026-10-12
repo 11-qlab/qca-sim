@@ -1,3 +1,6 @@
+# Copyright 2026 11-qlab
+# SPDX-License-Identifier: Apache-2.0
+
 """QCA cell exact diagonalization (Hubbard model).
 
 4-dot cell, 2 excess electrons, inter-dot tunnelling t,
