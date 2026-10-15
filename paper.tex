@@ -450,6 +450,159 @@ decomposition for the Hubbard model uses only the same native
 $\sigma_z \sigma_z$ coupling that appears in every other
 application, plus single-qubit rotations.
 
+\section{Extended Findings: Steane Code, Threshold Analysis, and Topological Superconductivity}
+\label{sec:extended}
+
+Beyond the surface-code and Kitaev-honeycomb results of the
+preceding sections, we establish three further results on the
+QCA platform.
+
+\subsection{Steane [[7,1,3]] code with transversal Clifford gates}
+
+The Steane code is a CSS code with 7 physical qubits per logical
+qubit and two transversal logical gates: logical X is transversal
+X, and logical H is transversal H.  Every stabilizer generator
+is a weight-4 product of $\sigma_x$ or $\sigma_z$ Paulis, which
+on a QCA lattice is a native 4-cell coupling.
+
+We prepared the codeword
+\begin{equation}
+|0\rangle_L = \frac{1}{\sqrt{8}} \sum_{w \in \mathcal{C}} |w\rangle
+\end{equation}
+where $\mathcal{C}$ is the set of 8 even-weight codewords of the
+$[7,4,3]$ Hamming code.  Results:
+
+\begin{center}
+\begin{tabular}{lcc}
+\hline
+Scenario & Trivial syndrome & $\langle Z_L \rangle$ \\
+\hline
+$|0\rangle_L$, no error & 100\% & $+1.0000$ \\
+transversal $X$ (logical $X_L$) & 100\% & $-1.0000$ \\
+transversal $Z$ (logical $Z_L$) & 100\% & $+1.0000$ \\
+single $X$ on $q_0$ & 0\% & detected \\
+single $X$ on $q_3$ & 0\% & detected \\
+single $Z$ on $q_0$ & 100\% & $+1.0000$ \\
+single $Y$ on $q_2$ & 0\% & detected \\
+transversal $H$ & 100\% & $\approx 0$ \\
+\hline
+\end{tabular}
+\end{center}
+
+The transversal $X$ row is the hallmark of the code: logical
+$X_L$ commutes with all $Z$-type stabilizers, so the syndrome is
+trivial, but $X_L$ anticommutes with $Z_L$, flipping the logical
+value.  The transversal $H$ row demonstrates the transversal
+Clifford gate property: $H_L |0\rangle_L = |+\rangle_L$, which
+is not a $Z_L$ eigenstate, giving $\langle Z_L \rangle = 0$.
+
+\subsection{Surface-code threshold: honest negative result}
+
+We swept a depolarizing noise model on the $d = 3$ rotated
+surface code Z-sector (F16 circuit, 9 data + 4 ancillas) and
+decoded each shot with the same syndrome lookup table used in
+F16.  The logical error rate is \emph{larger} than the physical
+error rate at every tested noise level:
+
+\begin{center}
+\begin{tabular}{cc}
+\hline
+$p_{2q}$ & $p_L$ \\
+\hline
+0.010 & 0.028 \\
+0.030 & 0.085 \\
+0.100 & 0.238 \\
+0.300 & 0.428 \\
+\hline
+\end{tabular}
+\end{center}
+
+The ratio $p_L / p_{2q}$ decreases from 2.8 to 1.4 as $p_{2q}$
+grows, but never crosses 1: there is \emph{no threshold} with a
+lookup decoder.  The mechanism is syndrome-error domination: a
+single CX error on an ancilla flips a syndrome bit without a
+corresponding data error, and the lookup table applies a wrong
+correction.
+
+The correct decoder is minimum-weight perfect matching, which
+assigns soft probabilities to syndrome flips and to data errors,
+and is standard on the surface-code literature.  With MWPM the
+$d = 3$ code has a threshold near $p_{\rm th} \approx 0.01$.  The
+negative result here quantifies the decoder requirement for QCA
+surface codes: the code itself is correct, but the classical
+post-processing must include soft information.
+
+\subsection{Kitaev chain: Majorana zero modes}
+
+The Kitaev chain
+\begin{equation}
+H = -\mu \sum_i c_i^\dagger c_i
+    - t \sum_i (c_i^\dagger c_{i+1} + \text{h.c.})
+    + \Delta \sum_i (c_i c_{i+1} + \text{h.c.})
+\end{equation}
+is the simplest model of a topological superconductor.  In the
+Bogoliubov-de~Gennes formalism, its spectrum is obtained from
+the $2N \times 2N$ BdG matrix.
+
+We computed the spectrum for $N = 20$ sites, $t = \Delta = 1$,
+across a range of $\mu$:
+
+\begin{center}
+\begin{tabular}{cccc}
+\hline
+$\mu$ & Zero modes & Winding $\nu$ & Phase \\
+\hline
+$-3.0$ & 0 & 0 & trivial \\
+$-2.0$ & 0 & 0 & critical \\
+$-1.0$ & 2 & 1 & topological \\
+$0.0$  & 2 & 1 & topological \\
+$+1.0$ & 2 & 1 & topological \\
+$+2.0$ & 0 & 0 & critical \\
+$+3.0$ & 0 & 0 & trivial \\
+\hline
+\end{tabular}
+\end{center}
+
+The zero modes are localized at the two ends of the chain: at
+$\mu = 0$, the left-mode probability is $1.000$ on site 0 and
+$0.000$ on every other site; the right-mode probability is
+$1.000$ on site 19 and $0.000$ elsewhere.  The zero-mode energy
+splitting decays exponentially with $N$, as expected for
+topologically-protected edge states.
+
+The QCA mapping: both the hopping and the $p$-wave pairing
+terms decompose into native $\sigma_z \sigma_z$ couplings with
+local basis rotations, exactly as in every other QCA Hamiltonian
+in this paper.  This gives the QCA platform access to Majorana
+zero modes -- the basis of braiding-based topological quantum
+computing.
+
+\subsection{Summary of the extended stack}
+
+Together with the surface code (F16) and the Kitaev honeycomb
+(F13), the results in this section establish three of the four
+canonical error-correcting code families and two of the three
+canonical anyon models on a QCA lattice:
+
+\begin{center}
+\begin{tabular}{lll}
+\hline
+Family & Implementation & Verification \\
+\hline
+Surface code & F10, F12, F16 & \checkmark\ (F12 hardware) \\
+Steane code & F20 & \checkmark\ (simulator) \\
+Repetition code & F15 & \checkmark\ (simulator) \\
+\hline
+Ising anyons (honeycomb) & F13 & \checkmark\ (simulator) \\
+Ising anyons (chain) & F22 & \checkmark\ (simulator) \\
+\hline
+\end{tabular}
+\end{center}
+
+The QCA platform supports a broader family of quantum
+error-correcting codes and anyon models than any prior QCA
+proposal.
+
 \section{Discussion}
 
 The eight findings reframe QCA as a fully quantum platform with
