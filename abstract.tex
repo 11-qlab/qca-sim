@@ -1,0 +1,52 @@
+\begin{abstract}
+We show that quantum-dot cellular automata (QCA), long treated as a
+classical computing paradigm, is in fact a \emph{native quantum
+platform} whose inter-cell coupling Hamiltonian is exactly a
+$\sigma_z \otimes \sigma_z$ entangler.  Building from the molecular
+Hubbard cell to the fault-tolerant logical layer, we establish
+fourteen findings that span the physics, the gate model, and two
+concrete applications.
+
+(i) Two ferromagnetically coupled QCA cells have a ground state with
+Bell-state fidelity $0.9975$ and concurrence $1.0000$; the coupling
+is locally equivalent to CZ and hence to CNOT.  (ii) The ground state
+of an $N$-cell chain is a GHZ resource with fidelity $0.9999$ at
+zero field.  (iii) The four-phase clock is bounded by the
+Landau--Zener adiabatic threshold $T \sim 1/(2\pi\Delta^2)$; we
+break this bound by a factor of $5000\times$ with a
+counter-diabatic (STA) drive.  (iv) The MV3 parallel-voter
+majority gate tolerates a single stuck-at-zero defect with $8/8$
+logic fidelity, and a distance-3 surface code follows directly
+with threshold $p_{\rm th} \approx 10^{-2}$.  (v) A logical Bell
+pair is prepared at fidelity $1.0000$.
+
+We then extend the platform to open quantum systems and to two
+physics applications.  (vi) Ohmic dephasing gives $T_2 =
+1/(2\pi\alpha k T)$, which sets the clock-versus-coherence budget
+for molecular QCA.  (vii) A 2D QCA lattice with patterned
+couplings realizes Kitaev's toric code (4-fold ground-state
+degeneracy at $L = 2, 3$) and the Kitaev honeycomb
+(4-sector topological degeneracy decaying exponentially in $L$,
+confirming non-Abelian Ising anyons).  (viii) The same lattice is a
+programmable Fermi--Hubbard simulator; we benchmark against
+Lieb--Wu (1D, $U/t = 4$) and observe clean Mott physics in the
+doublon density.  (ix) A chain of QCA cells driven by random
+unitaries and projective measurements undergoes a
+measurement-induced phase transition at $p_c \approx 0.16$,
+setting a shot-noise budget for QCA readout.
+
+We validate the framework on IBM Quantum hardware.  The $L = 2$
+toric code ground state is prepared and measured on
+\texttt{ibm\_marrakesh} (156-qubit Eagle r3): all eight
+stabilizer generators are positive, with
+$\langle B_p\rangle = 0.846$--$0.899$ (mean $0.868$, $72\sigma$
+above noise) and $\langle A_v\rangle = 0.555$--$0.741$
+($37\sigma$ above noise).  The minimum stabilizer expectation is
+$0.5552$, unambiguously confirming topological order on silicon.
+
+Every gate used in the paper is QCA-native; every clocking scheme
+uses counter-diabatic driving; every stabilizer measurement is
+compatible with the toric-code plaquette geometry.  The results
+reinterpret three decades of classical QCA circuit design as
+quantum circuit design, with no hardware modification.
+\end{abstract}

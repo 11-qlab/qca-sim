@@ -1,0 +1,42 @@
+[
+  {
+    "label": "baseline (slow)",
+    "T_total": 500.0,
+    "P_final": -0.4022448972976519,
+    "W_total": -0.8528674634688772,
+    "W_peak_amplitude": 0.03637542379820422,
+    "H_bare_change": -0.8528496670128003
+  },
+  {
+    "label": "baseline (fast)",
+    "T_total": 0.1,
+    "P_final": 0.9999500254109519,
+    "W_total": -3.0032746073444607,
+    "W_peak_amplitude": 1.4993008355501294,
+    "H_bare_change": -2.9999500216677992
+  },
+  {
+    "label": "STA (fast)",
+    "T_total": 0.1,
+    "P_final": -0.9977928345957465,
+    "W_total": -0.0016660577466472981,
+    "W_peak_amplitude": 0.7526895079828697,
+    "H_bare_change": 2.756155303984542e-10
+  },
+  {
+    "label": "STA (medium)",
+    "T_total": 1.0,
+    "P_final": -0.998820092117249,
+    "W_total": -0.0011070512849780112,
+    "W_peak_amplitude": 0.6840478590064446,
+    "H_bare_change": 1.32621913451203e-10
+  },
+  {
+    "label": "STA (slow)",
+    "T_total": 500.0,
+    "P_final": -0.9977904106080184,
+    "W_total": -1.842068036217448e-06,
+    "W_peak_amplitude": 0.0008842318448282186,
+    "H_bare_change": -2.1817744444430076e-06
+  }
+]

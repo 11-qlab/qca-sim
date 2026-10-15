@@ -1,41 +1,47 @@
 \begin{abstract}
-Coherent QCA was proposed as a route to quantum computation almost
-twenty years ago~\cite{wu2005coherent,xu2008universal}, but a full
-fault-tolerant stack on this platform has not been demonstrated.
-We build one, and extend the same lattice to two classes of
-programmable quantum simulation.
+Coherent QCA was proposed as a route to quantum computation
+almost twenty years ago, but a complete fault-tolerant stack
+has not been demonstrated.  We build one on a molecular QCA
+lattice, extend it to programmable quantum simulation, and
+validate on real quantum hardware.
 
-(i) We confirm the native QCA coupling is locally a CNOT and
-prepare a Bell state at fidelity $0.9975$ and a GHZ chain at
-$0.9999$.  (ii) We show that the four-phase clock is bounded by
-the Landau--Zener threshold $T \sim 1/(2\pi\Delta^2)$ and break
-this bound by $5000\times$ via a counter-diabatic (STA) drive ---
-a speedup not previously applied to QCA clocking.  (iii) The MV3
-parallel-voter majority gate tolerates a stuck-at-zero defect with
-$8/8$ fidelity and yields a distance-3 surface code with threshold
-$p_{\rm th} \approx 10^{-2}$.  (iv) A logical Bell pair is
-prepared at fidelity $1.0000$.
+\textbf{Platform.}  The native QCA coupling is locally a
+CNOT; two cells have a Bell state at fidelity $0.9975$, an
+$N$-cell chain has a GHZ ground state.  A counter-diabatic
+(STA) clock breaks the Landau--Zener bound by $5000\times$
+at zero net thermodynamic work.  An MV3 parallel-voter
+majority gate tolerates a stuck-at-zero defect with $8/8$
+fidelity and yields a distance-3 surface code.
 
-We then extend the platform to open quantum systems and to
-programmable many-body simulation.  (v) Ohmic dephasing gives
-$T_2 = 1/(2\pi\alpha k T)$, setting the clock-versus-coherence
-budget for molecular QCA.  (vi) A 2D QCA lattice with patterned
-couplings realizes Kitaev's toric code (4-fold ground-state
-degeneracy at $L=2,3$) and the Kitaev honeycomb (4-sector
-topological degeneracy decaying exponentially in $L$, confirming
-non-Abelian Ising anyons).  (vii) The same lattice is a
-programmable Fermi--Hubbard simulator, benchmarked against
-Lieb--Wu (1D, $U/t=4$) with clean Mott physics in the doublon
-density.  (viii) A QCA chain driven by random unitaries and
+\textbf{Fault tolerance.}  We demonstrate a repetition-code
+logical qubit ($F = 1.0000$ for every single-error scenario),
+a distance-3 rotated surface code Z-sector (10/10 single-X
+scenarios corrected), a transversal logical CNOT producing a
+logical Bell pair ($\langle Z_A Z_B\rangle = \langle X_A X_B\rangle
+= +1$), and a lattice-surgery merge primitive.  The Steane
+$[[7,1,3]]$ code is prepared with transversal Clifford gates
+verified.
+
+\textbf{Programmable simulation.}  The same lattice realizes
+Kitaev's toric code ($4$-fold degeneracy), the Kitaev
+honeycomb (exponential $4$-sector splitting confirming
+non-Abelian Ising anyons), the Kitaev chain (Majorana zero
+modes localized at the ends), and the Fermi--Hubbard model
+(benchmarked against Lieb--Wu with clean Mott physics in the
+doublon density).  A QCA chain under random unitaries and
 projective measurements undergoes a measurement-induced phase
 transition at $p_c \approx 0.16$.
 
-We validate on IBM Quantum hardware: the $L=2$ toric code ground
-state on \texttt{ibm\_marrakesh} (156-qubit Eagle r3) gives
-$\langle B_p \rangle = 0.868$ ($72\sigma$ above noise),
-$\langle A_v \rangle = 0.643$ ($37\sigma$), and minimum
-stabilizer $0.5552$.  Prior work established the quantum nature
-of QCA and VQE of QCA wires on hardware~\cite{jap2026vqe}; this
-work extends that foundation to a full fault-tolerant stack and
-to programmable quantum simulation.
+\textbf{Hardware.}  The $L=2$ toric code ground state is
+prepared and measured on IBM Marrakesh (156-qubit Eagle r3):
+$\langle B_p\rangle = 0.868$ ($72\sigma$ above noise),
+$\langle A_v\rangle = 0.643$ ($37\sigma$ above noise), and
+minimum stabilizer $0.5552$.
+
+All gates are QCA-native.  All clocking uses counter-diabatic
+driving.  A negative result is reported: the $d=3$ surface
+code with a lookup decoder has no threshold -- quantifying
+the decoder requirement for QCA hardware.  The results
+reinterpret three decades of classical QCA circuit design
+as quantum circuit design, with no hardware modification.
 \end{abstract}
