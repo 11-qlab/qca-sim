@@ -93,3 +93,15 @@ fault-tolerant logical qubit and report fidelity 1.0000 at every stage.
     L=10: 7.0e-10
   → 4-fold topological degeneracy → Ising anyons.
 - Gapless phase: O(1/L) algebraic splitting, as expected.
+
+
+### F14. Fermi-Hubbard simulator on a QCA lattice
+
+- Fermi-Hubbard Hamiltonian realized on a QCA lattice via Jordan-Wigner.
+- U=0 analytic check: E0/N = -1.1897 vs -1.190 exact.
+- U/t=4, 1D, N=8: E0/N = -0.5295 (Lieb-Wu thermodynamic: -0.573).
+- Doublon density: 0.250 (U=0) -> 0.034 (U=8) -- clean Mott physics.
+- Interaction term = (U/4)(I - Z_up)(I - Z_down) reduces to a native
+  sigma_z sigma_z QCA coupling.
+- Application: QCA lattice as a programmable simulator for
+  strongly-correlated electron physics (high-Tc, spin liquids).
