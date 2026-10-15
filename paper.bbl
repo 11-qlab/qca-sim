@@ -5,17 +5,38 @@ Anonymous.
 \newblock Variational quantum eigensolver models of molecular quantum-dot
   cellular automata on {IBM} quantum hardware.
 \newblock {\em Journal of Applied Physics}, 139(2):024401, 2026.
-\newblock Please verify exact authors and DOI before submission.
+\newblock Replace with real authors and DOI before submission.
+
+\bibitem{berry2009transitionless}
+M.~V. Berry.
+\newblock Transitionless quantum driving.
+\newblock {\em Journal of Physics A: Mathematical and Theoretical},
+  42(36):365303, 2009.
 
 \bibitem{brennen2003entanglement}
 G.~K. Brennen and J.~E. Williams.
 \newblock Entanglement dynamics in {QCA} and other spin systems.
 \newblock {\em arXiv:quant-ph/0306056}, 2003.
 
+\bibitem{demirplak2003adiabatic}
+M.~Demirplak and S.~A. Rice.
+\newblock Adiabatically assisted population transfer schemes.
+\newblock {\em The Journal of Physical Chemistry A}, 107(46):9937--9945, 2003.
+
 \bibitem{feng2007entangled}
 G.-R. Feng, H.-Q. Xu, and D.-L. Zhang.
 \newblock Entangled photon generation from quantum-dot cellular automata.
 \newblock {\em Journal of Physics: Condensed Matter}, 19(32):326215, 2007.
+
+\bibitem{fowler2012surface}
+A.~G. Fowler, M.~Mariantoni, J.~M. Martinis, and A.~N. Cleland.
+\newblock Surface codes: Towards practical large-scale quantum computation.
+\newblock {\em Physical Review A}, 86(3):032324, 2012.
+
+\bibitem{kitaev2003fault}
+A.~Yu. Kitaev.
+\newblock Fault-tolerant quantum computation by anyons.
+\newblock {\em Annals of Physics}, 303(1):2--30, 2003.
 
 \bibitem{kitaev2006anyons}
 A.~Yu. Kitaev.
@@ -32,6 +53,12 @@ C.~S. Lent, P.~D. Tougaw, and W.~Porod.
 \newblock Bistable saturation in coupled quantum dots for quantum cellular
   automata.
 \newblock {\em Applied Physics Letters}, 62(7):714--716, 1993.
+
+\bibitem{lieb1968absence}
+E.~H. Lieb and F.~Y. Wu.
+\newblock Absence of mott transition in an exact solution of the short-range,
+  one-band model in one dimension.
+\newblock {\em Physical Review Letters}, 20(25):1445--1448, 1968.
 
 \bibitem{tougaw1994logical}
 P.~D. Tougaw and C.~S. Lent.
