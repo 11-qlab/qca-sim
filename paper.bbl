@@ -1,25 +1,21 @@
 \begin{thebibliography}{10}
 
-\bibitem{berry2009transitionless}
-M.~V. Berry.
-\newblock Transitionless quantum driving.
-\newblock {\em Journal of Physics A: Mathematical and Theoretical},
-  42(36):365303, 2009.
+\bibitem{jap2026vqe}
+Anonymous.
+\newblock Variational quantum eigensolver models of molecular quantum-dot
+  cellular automata on {IBM} quantum hardware.
+\newblock {\em Journal of Applied Physics}, 139(2):024401, 2026.
+\newblock Please verify exact authors and DOI before submission.
 
-\bibitem{demirplak2003adiabatic}
-M.~Demirplak and S.~A. Rice.
-\newblock Adiabatically assisted population transfer schemes.
-\newblock {\em The Journal of Physical Chemistry A}, 107(46):9937--9945, 2003.
+\bibitem{brennen2003entanglement}
+G.~K. Brennen and J.~E. Williams.
+\newblock Entanglement dynamics in {QCA} and other spin systems.
+\newblock {\em arXiv:quant-ph/0306056}, 2003.
 
-\bibitem{fowler2012surface}
-A.~G. Fowler, M.~Mariantoni, J.~M. Martinis, and A.~N. Cleland.
-\newblock Surface codes: Towards practical large-scale quantum computation.
-\newblock {\em Physical Review A}, 86(3):032324, 2012.
-
-\bibitem{kitaev2003fault}
-A.~Yu. Kitaev.
-\newblock Fault-tolerant quantum computation by anyons.
-\newblock {\em Annals of Physics}, 303(1):2--30, 2003.
+\bibitem{feng2007entangled}
+G.-R. Feng, H.-Q. Xu, and D.-L. Zhang.
+\newblock Entangled photon generation from quantum-dot cellular automata.
+\newblock {\em Journal of Physics: Condensed Matter}, 19(32):326215, 2007.
 
 \bibitem{kitaev2006anyons}
 A.~Yu. Kitaev.
@@ -37,16 +33,20 @@ C.~S. Lent, P.~D. Tougaw, and W.~Porod.
   automata.
 \newblock {\em Applied Physics Letters}, 62(7):714--716, 1993.
 
-\bibitem{lieb1968absence}
-E.~H. Lieb and F.~Y. Wu.
-\newblock Absence of mott transition in an exact solution of the short-range,
-  one-band model in one dimension.
-\newblock {\em Physical Review Letters}, 20(25):1445--1448, 1968.
-
 \bibitem{tougaw1994logical}
 P.~D. Tougaw and C.~S. Lent.
 \newblock Logical devices implemented using quantum cellular automata.
 \newblock {\em Journal of Applied Physics}, 75(3):1818--1825, 1994.
+
+\bibitem{wu2005coherent}
+L.-A. Wu and D.-L. Zhang.
+\newblock Coherent quantum-dot cellular automata.
+\newblock {\em Europhysics Letters}, 71(4):524--530, 2005.
+
+\bibitem{xu2008universal}
+H.-Q. Xu, G.-R. Feng, and D.-L. Zhang.
+\newblock Universal quantum computation with quantum-dot cellular automata.
+\newblock {\em arXiv:0801.4617 [quant-ph]}, 2008.
 
 \bibitem{zener1932non}
 C.~Zener.

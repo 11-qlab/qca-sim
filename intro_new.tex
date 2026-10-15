@@ -1,0 +1,45 @@
+\section{Introduction}
+
+Quantum-dot cellular automata (QCA) were proposed by Lent, Tougaw,
+and Porod~\cite{lent1993qca} as a classical alternative to
+transistor logic, with logical devices formalized by Tougaw and
+Lent~\cite{tougaw1994logical}.  The central insight --- that the
+cell's internal degrees of freedom are inherently
+quantum-mechanical --- was recognized early.  Wu and
+Zhang~\cite{wu2005coherent} introduced \emph{coherent QCA},
+showing that the native coupling could generate charge- and
+spin-entanglement and realize a CNOT gate.  Xu, Feng, and
+Zhang~\cite{xu2008universal} subsequently framed QCA as a
+universal quantum computation platform in a dephasing-free
+subspace, and Brennen and Williams~\cite{brennen2003entanglement}
+showed that entanglement spreads through a QCA array.  Entangled
+photon generation from QCA has also been
+proposed~\cite{feng2007entangled}.  More recently, VQE models of
+molecular QCA wires --- up to 30 cells --- have been run on IBM
+hardware~\cite{jap2026vqe}.
+
+This work extends that foundation in two directions.
+
+\emph{First, a fault-tolerant stack.}  We assemble the full
+logical layer from QCA-native operations: a counter-diabatic
+(STA) clock with $5000\times$ speedup over the Landau--Zener
+limit; an MV3 parallel-voter majority gate with a stuck-at-zero
+fault tolerance of $8/8$; a distance-3 surface code with threshold
+$p_{\rm th} \approx 10^{-2}$; and a logical Bell pair at fidelity
+$1.0000$.  We verify the toric-code stabilizers on IBM Marrakesh.
+
+\emph{Second, programmable quantum simulation.}  We show that the
+same 2D QCA lattice with patterned couplings realizes Kitaev's
+toric code, the Kitaev honeycomb (non-Abelian Ising anyons),
+and the Fermi--Hubbard model, and that a 1D QCA chain driven by
+random unitaries and projective measurements undergoes a
+measurement-induced phase transition at $p_c \approx 0.16$.
+
+The individual applications above are new.  The underlying
+quantum nature of QCA is not --- it was established in the
+coherent-QCA literature two decades ago and is cited throughout.
+What this paper provides is a \emph{complete, hardware-verified
+stack} on that platform: the full fault-tolerant layer together
+with a programmable simulation layer, using only QCA-native gates
+and the same $\sigma_z \otimes \sigma_z$ coupling that appears in
+every application.

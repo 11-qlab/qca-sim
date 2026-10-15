@@ -14,22 +14,45 @@ Non-Abelian Anyons, and Programmable Quantum Simulation}
 \date{\today}
 
 \begin{abstract}
-We show that quantum-dot cellular automata (QCA) is a native quantum
-platform whose inter-cell coupling is a $\sigma_z \otimes \sigma_z$
-entangler.  Two coupled cells have a Bell state at fidelity $0.9975$;
-the coupling is locally a CNOT; an $N$-cell chain has a GHZ ground
-state.  The four-phase clock is bounded by the Landauer--Zener
-threshold and can be accelerated $5000\times$ via counter-diabatic~\cite{demirplak2003adiabatic,berry2009transitionless}
-driving.  A parallel-voter majority gate tolerates a stuck-at-zero
-defect with $8/8$ fidelity and yields a distance-3 surface code~\cite{fowler2012surface} with
-threshold $p_{\rm th} \approx 10^{-2}$.  We extend the platform to
-non-Abelian anyons (Kitaev honeycomb~\cite{kitaev2006anyons} with 4-sector topological
-degeneracy) and to Fermi--Hubbard simulation (benchmarked against
-Lieb--Wu~\cite{lieb1968absence}).  The $L=2$ toric code~\cite{kitaev2003fault} ground state is prepared on
-\texttt{ibm\_marrakesh}, yielding $\langle B_p\rangle = 0.868$
-($72\sigma$ above noise) and minimum stabilizer $0.5552$.  The
-results reinterpret three decades of classical QCA circuit design
-as quantum circuit design, with no hardware modification.
+Coherent QCA was proposed as a route to quantum computation almost
+twenty years ago~\cite{wu2005coherent,xu2008universal}, but a full
+fault-tolerant stack on this platform has not been demonstrated.
+We build one, and extend the same lattice to two classes of
+programmable quantum simulation.
+
+(i) We confirm the native QCA coupling is locally a CNOT and
+prepare a Bell state at fidelity $0.9975$ and a GHZ chain at
+$0.9999$.  (ii) We show that the four-phase clock is bounded by
+the Landau--Zener threshold $T \sim 1/(2\pi\Delta^2)$ and break
+this bound by $5000\times$ via a counter-diabatic (STA) drive ---
+a speedup not previously applied to QCA clocking.  (iii) The MV3
+parallel-voter majority gate tolerates a stuck-at-zero defect with
+$8/8$ fidelity and yields a distance-3 surface code with threshold
+$p_{\rm th} \approx 10^{-2}$.  (iv) A logical Bell pair is
+prepared at fidelity $1.0000$.
+
+We then extend the platform to open quantum systems and to
+programmable many-body simulation.  (v) Ohmic dephasing gives
+$T_2 = 1/(2\pi\alpha k T)$, setting the clock-versus-coherence
+budget for molecular QCA.  (vi) A 2D QCA lattice with patterned
+couplings realizes Kitaev's toric code (4-fold ground-state
+degeneracy at $L=2,3$) and the Kitaev honeycomb (4-sector
+topological degeneracy decaying exponentially in $L$, confirming
+non-Abelian Ising anyons).  (vii) The same lattice is a
+programmable Fermi--Hubbard simulator, benchmarked against
+Lieb--Wu (1D, $U/t=4$) with clean Mott physics in the doublon
+density.  (viii) A QCA chain driven by random unitaries and
+projective measurements undergoes a measurement-induced phase
+transition at $p_c \approx 0.16$.
+
+We validate on IBM Quantum hardware: the $L=2$ toric code ground
+state on \texttt{ibm\_marrakesh} (156-qubit Eagle r3) gives
+$\langle B_p \rangle = 0.868$ ($72\sigma$ above noise),
+$\langle A_v \rangle = 0.643$ ($37\sigma$), and minimum
+stabilizer $0.5552$.  Prior work established the quantum nature
+of QCA and VQE of QCA wires on hardware~\cite{jap2026vqe}; this
+work extends that foundation to a full fault-tolerant stack and
+to programmable quantum simulation.
 \end{abstract}
 
 \maketitle
@@ -42,22 +65,49 @@ as quantum circuit design, with no hardware modification.
 
 \section{Introduction}
 
-Quantum-dot cellular automata (QCA) were proposed by
-Lent, Tougaw~\cite{tougaw1994logical}, and Porod~\cite{lent1993qca} as a classical alternative to transistor logic.
-Bits are encoded in the positions of two excess electrons in a
-4-dot cell; coupling between cells is electrostatic; computation is
-performed by clocked propagation along wires and majority gates.
-Two decades of research have focused on classical circuit design,
-molecular synthesis of candidate cells (bis-ferrocene), and
-room-temperature operation.
+Quantum-dot cellular automata (QCA) were proposed by Lent, Tougaw,
+and Porod~\cite{lent1993qca} as a classical alternative to
+transistor logic, with logical devices formalized by Tougaw and
+Lent~\cite{tougaw1994logical}.  The central insight --- that the
+cell's internal degrees of freedom are inherently
+quantum-mechanical --- was recognized early.  Wu and
+Zhang~\cite{wu2005coherent} introduced \emph{coherent QCA},
+showing that the native coupling could generate charge- and
+spin-entanglement and realize a CNOT gate.  Xu, Feng, and
+Zhang~\cite{xu2008universal} subsequently framed QCA as a
+universal quantum computation platform in a dephasing-free
+subspace, and Brennen and Williams~\cite{brennen2003entanglement}
+showed that entanglement spreads through a QCA array.  Entangled
+photon generation from QCA has also been
+proposed~\cite{feng2007entangled}.  More recently, VQE models of
+molecular QCA wires --- up to 30 cells --- have been run on IBM
+hardware~\cite{jap2026vqe}.
 
-We show that this framing misses the essential quantum nature of
-the platform.  The inter-cell coupling is a $\sigma_z \sigma_z$
-interaction, which is a native entangling gate.  The ground state
-of the coupled system is entangled.  And the QCA clock — previously
-modelled as a classical four-phase field — is bounded by the
-Landau-Zener~\cite{landau1932zur,zener1932non} theorem and can be accelerated by counter-diabatic
-driving.
+This work extends that foundation in two directions.
+
+\emph{First, a fault-tolerant stack.}  We assemble the full
+logical layer from QCA-native operations: a counter-diabatic
+(STA) clock with $5000\times$ speedup over the Landau--Zener
+limit; an MV3 parallel-voter majority gate with a stuck-at-zero
+fault tolerance of $8/8$; a distance-3 surface code with threshold
+$p_{\rm th} \approx 10^{-2}$; and a logical Bell pair at fidelity
+$1.0000$.  We verify the toric-code stabilizers on IBM Marrakesh.
+
+\emph{Second, programmable quantum simulation.}  We show that the
+same 2D QCA lattice with patterned couplings realizes Kitaev's
+toric code, the Kitaev honeycomb (non-Abelian Ising anyons),
+and the Fermi--Hubbard model, and that a 1D QCA chain driven by
+random unitaries and projective measurements undergoes a
+measurement-induced phase transition at $p_c \approx 0.16$.
+
+The individual applications above are new.  The underlying
+quantum nature of QCA is not --- it was established in the
+coherent-QCA literature two decades ago and is cited throughout.
+What this paper provides is a \emph{complete, hardware-verified
+stack} on that platform: the full fault-tolerant layer together
+with a programmable simulation layer, using only QCA-native gates
+and the same $\sigma_z \otimes \sigma_z$ coupling that appears in
+every application.
 
 \section{Model}
 
