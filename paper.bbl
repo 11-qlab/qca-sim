@@ -1,0 +1,56 @@
+\begin{thebibliography}{10}
+
+\bibitem{berry2009transitionless}
+M.~V. Berry.
+\newblock Transitionless quantum driving.
+\newblock {\em Journal of Physics A: Mathematical and Theoretical},
+  42(36):365303, 2009.
+
+\bibitem{demirplak2003adiabatic}
+M.~Demirplak and S.~A. Rice.
+\newblock Adiabatically assisted population transfer schemes.
+\newblock {\em The Journal of Physical Chemistry A}, 107(46):9937--9945, 2003.
+
+\bibitem{fowler2012surface}
+A.~G. Fowler, M.~Mariantoni, J.~M. Martinis, and A.~N. Cleland.
+\newblock Surface codes: Towards practical large-scale quantum computation.
+\newblock {\em Physical Review A}, 86(3):032324, 2012.
+
+\bibitem{kitaev2003fault}
+A.~Yu. Kitaev.
+\newblock Fault-tolerant quantum computation by anyons.
+\newblock {\em Annals of Physics}, 303(1):2--30, 2003.
+
+\bibitem{kitaev2006anyons}
+A.~Yu. Kitaev.
+\newblock Anyons in an exactly solved model and beyond.
+\newblock {\em Annals of Physics}, 321(1):2--111, 2006.
+
+\bibitem{landau1932zur}
+L.~D. Landau.
+\newblock Zur theorie der energieubertragung bei stossen.
+\newblock {\em Physikalische Zeitschrift der Sowjetunion}, 2:46--51, 1932.
+
+\bibitem{lent1993qca}
+C.~S. Lent, P.~D. Tougaw, and W.~Porod.
+\newblock Bistable saturation in coupled quantum dots for quantum cellular
+  automata.
+\newblock {\em Applied Physics Letters}, 62(7):714--716, 1993.
+
+\bibitem{lieb1968absence}
+E.~H. Lieb and F.~Y. Wu.
+\newblock Absence of mott transition in an exact solution of the short-range,
+  one-band model in one dimension.
+\newblock {\em Physical Review Letters}, 20(25):1445--1448, 1968.
+
+\bibitem{tougaw1994logical}
+P.~D. Tougaw and C.~S. Lent.
+\newblock Logical devices implemented using quantum cellular automata.
+\newblock {\em Journal of Applied Physics}, 75(3):1818--1825, 1994.
+
+\bibitem{zener1932non}
+C.~Zener.
+\newblock Non-adiabatic crossing of energy levels.
+\newblock {\em Proceedings of the Royal Society A}, 137(833):696--702, 1932.
+
+\end{thebibliography}

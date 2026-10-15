@@ -19,13 +19,13 @@ platform whose inter-cell coupling is a $\sigma_z \otimes \sigma_z$
 entangler.  Two coupled cells have a Bell state at fidelity $0.9975$;
 the coupling is locally a CNOT; an $N$-cell chain has a GHZ ground
 state.  The four-phase clock is bounded by the Landauer--Zener
-threshold and can be accelerated $5000\times$ via counter-diabatic
+threshold and can be accelerated $5000\times$ via counter-diabatic~\cite{demirplak2003adiabatic,berry2009transitionless}
 driving.  A parallel-voter majority gate tolerates a stuck-at-zero
-defect with $8/8$ fidelity and yields a distance-3 surface code with
+defect with $8/8$ fidelity and yields a distance-3 surface code~\cite{fowler2012surface} with
 threshold $p_{\rm th} \approx 10^{-2}$.  We extend the platform to
-non-Abelian anyons (Kitaev honeycomb with 4-sector topological
+non-Abelian anyons (Kitaev honeycomb~\cite{kitaev2006anyons} with 4-sector topological
 degeneracy) and to Fermi--Hubbard simulation (benchmarked against
-Lieb--Wu).  The $L=2$ toric code ground state is prepared on
+Lieb--Wu~\cite{lieb1968absence}).  The $L=2$ toric code~\cite{kitaev2003fault} ground state is prepared on
 \texttt{ibm\_marrakesh}, yielding $\langle B_p\rangle = 0.868$
 ($72\sigma$ above noise) and minimum stabilizer $0.5552$.  The
 results reinterpret three decades of classical QCA circuit design
@@ -42,8 +42,8 @@ as quantum circuit design, with no hardware modification.
 
 \section{Introduction}
 
-Quantum-dot cellular automata (QCA) were proposed by Lent, Tougaw,
-and Porod in 1993 as a classical alternative to transistor logic.
+Quantum-dot cellular automata (QCA) were proposed by
+Lent, Tougaw~\cite{tougaw1994logical}, and Porod~\cite{lent1993qca} as a classical alternative to transistor logic.
 Bits are encoded in the positions of two excess electrons in a
 4-dot cell; coupling between cells is electrostatic; computation is
 performed by clocked propagation along wires and majority gates.
@@ -56,7 +56,7 @@ the platform.  The inter-cell coupling is a $\sigma_z \sigma_z$
 interaction, which is a native entangling gate.  The ground state
 of the coupled system is entangled.  And the QCA clock — previously
 modelled as a classical four-phase field — is bounded by the
-Landau-Zener theorem and can be accelerated by counter-diabatic
+Landau-Zener~\cite{landau1932zur,zener1932non} theorem and can be accelerated by counter-diabatic
 driving.
 
 \section{Model}
@@ -116,7 +116,7 @@ with $(\ket{000} + \ket{111})/\sqrt{2}$.  Cooling to ground state
 suffices to prepare a GHZ resource — no external gate sequence
 required.
 
-\subsection{Landau-Zener clock bound (F4)}
+\subsection{Landau-Zener~\cite{landau1932zur,zener1932non} clock bound (F4)}
 
 The clock rate is bounded by the adiabatic threshold
 $T_{\rm adiabatic} \gg 1/(2\pi \Delta^2)$, where $\Delta$ is the
@@ -238,7 +238,7 @@ memory.
 \section{Non-Abelian Anyons on a QCA Lattice}
 \label{sec:nonabelian}
 
-The Kitaev honeycomb model~\cite{kitaev2006} is the canonical
+The Kitaev honeycomb model~\cite{kitaev2006anyons} is the canonical
 lattice realization of non-Abelian Ising anyons.  We show that a
 QCA lattice with cells on honeycomb vertices and native
 $\sigma_z \sigma_z$ couplings realizes this model with no
@@ -426,8 +426,12 @@ directly.
 
 QCA is a native quantum platform.  Its coupling is a CNOT, its
 chain ground state a GHZ, and its clock rate bounded by
-Landau-Zener — but breakable by counter-diabatic driving.  All of
+Landau-Zener~\cite{landau1932zur,zener1932non} — but breakable by counter-diabatic driving.  All of
 the classical QCA circuit design literature can be re-read as
 quantum circuit design, with no hardware modification.
+
+
+\bibliographystyle{plain}
+\bibliography{refs}
 
 \end{document}
