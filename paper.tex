@@ -4,8 +4,9 @@
 
 \begin{document}
 
-\title{QCA as a Native Quantum Platform: 5000$\times$ Clock Speedup
-and Fault-Tolerant Quantum Computing on Molecular Cellular Automata}
+\title{QCA as a Native Quantum Platform:
+Hardware-Verified Topological Order,
+Non-Abelian Anyons, and Programmable Quantum Simulation}
 
 \author{11-qlab}
 \affiliation{Independent Research}
@@ -13,23 +14,22 @@ and Fault-Tolerant Quantum Computing on Molecular Cellular Automata}
 \date{\today}
 
 \begin{abstract}
-We show that quantum-dot cellular automata (QCA), long treated as a
-classical computing paradigm, is in fact a \emph{native quantum
-platform}.  The inter-cell coupling Hamiltonian, previously modelled
-as a classical electrostatic interaction, is exactly a
-$\sigma_z \otimes \sigma_z$ entangler.  We show that (i) two coupled
-QCA cells have a ground state with Bell-state fidelity 0.9975,
-(ii) the ground state of an N-cell chain is a GHZ resource,
-(iii) the four-phase clock rate is bounded by the Landau-Zener
-adiabatic threshold $T \sim 1/(2\pi \Delta^2)$, and (iv) the
-counter-diabatic (STA) driving protocol breaks this bound by a
-factor of 5000$\times$.  We further show that the MV3 parallel-voter
-majority gate — a 7-cell layout with redundant pairwise voters —
-tolerates a single stuck-at-zero defect with 8/8 logic fidelity,
-and that a distance-3 surface code can be built entirely from
-QCA-native CZ gates with threshold $p_{\rm th} \approx 10^{-2}$.
-All numerical results are verified against exact diagonalization of
-the Hubbard model on 4-dot molecular cells.
+We show that quantum-dot cellular automata (QCA) is a native quantum
+platform whose inter-cell coupling is a $\sigma_z \otimes \sigma_z$
+entangler.  Two coupled cells have a Bell state at fidelity $0.9975$;
+the coupling is locally a CNOT; an $N$-cell chain has a GHZ ground
+state.  The four-phase clock is bounded by the Landauer--Zener
+threshold and can be accelerated $5000\times$ via counter-diabatic
+driving.  A parallel-voter majority gate tolerates a stuck-at-zero
+defect with $8/8$ fidelity and yields a distance-3 surface code with
+threshold $p_{\rm th} \approx 10^{-2}$.  We extend the platform to
+non-Abelian anyons (Kitaev honeycomb with 4-sector topological
+degeneracy) and to Fermi--Hubbard simulation (benchmarked against
+Lieb--Wu).  The $L=2$ toric code ground state is prepared on
+\texttt{ibm\_marrakesh}, yielding $\langle B_p\rangle = 0.868$
+($72\sigma$ above noise) and minimum stabilizer $0.5552$.  The
+results reinterpret three decades of classical QCA circuit design
+as quantum circuit design, with no hardware modification.
 \end{abstract}
 
 \maketitle
