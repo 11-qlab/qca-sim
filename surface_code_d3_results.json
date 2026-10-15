@@ -1,0 +1,16 @@
+{
+  "backend": "simulator",
+  "shots": 8192,
+  "results": {
+    "no error": 1.0,
+    "X on d0": 1.0,
+    "X on d1": 1.0,
+    "X on d2": 1.0,
+    "X on d3": 1.0,
+    "X on d4": 1.0,
+    "X on d5": 1.0,
+    "X on d6": 1.0,
+    "X on d7": 1.0,
+    "X on d8": 1.0
+  }
+}
