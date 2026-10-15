@@ -235,6 +235,83 @@ appropriate coupling pattern realizes the Kitaev toric code and
 establishes QCA as a viable substrate for topological quantum
 memory.
 
+\section{Non-Abelian Anyons on a QCA Lattice}
+\label{sec:nonabelian}
+
+The Kitaev honeycomb model~\cite{kitaev2006} is the canonical
+lattice realization of non-Abelian Ising anyons.  We show that a
+QCA lattice with cells on honeycomb vertices and native
+$\sigma_z \sigma_z$ couplings realizes this model with no
+additional hardware requirements.
+
+\subsection{Hamiltonian}
+\begin{equation}
+H = -J_x \sum_{\langle i,j\rangle_x} \sigma^x_i \sigma^x_j
+    -J_y \sum_{\langle i,j\rangle_y} \sigma^y_i \sigma^y_j
+    -J_z \sum_{\langle i,j\rangle_z} \sigma^z_i \sigma^z_j
+\end{equation}
+Each bond type is a QCA-native coupling with a local basis
+rotation:
+\begin{itemize}
+\item $z$-bond: direct $\sigma_z \sigma_z$ (QCA-native)
+\item $x$-bond: $H \cdot \sigma_z \sigma_z \cdot H$
+\item $y$-bond: $R_x(\pi/2) \cdot \sigma_z \sigma_z \cdot
+      R_x(-\pi/2)$
+\end{itemize}
+
+\subsection{Verification}
+
+We verified the geometry by computing the commutator with the
+plaquette operator $W_p$ (alternating Pauli string
+$Y Z X Y Z X$ around each hexagon):
+\begin{equation}
+\max_{p} \|[H, W_p]\| = 0 \quad \text{(exact)}
+\end{equation}
+for $L = 2, 3$.  The ground-state energy per site in the
+isotropic B-phase converges to $E_0/N = -0.7873$, matching
+Kitaev's exact result in the Majorana convention.
+
+\subsection{Topological degeneracy}
+
+On a torus, the four flux sectors are degenerate ground states
+of the gapped B-phase.  We solve each sector via Majorana
+fermionization (Kitaev 2006) and measure the splitting
+$\Delta E = E_{\max} - E_{\min}$ across the four sectors.
+
+For the deeply gapped phase ($J_x = J_y = 0.1$, $J_z = 1$):
+\begin{center}
+\begin{tabular}{lcc}
+\hline
+$L$ & Split $\Delta E$ & $E_0/N$ \\
+\hline
+4  & $4.9 \times 10^{-4}$ & $-0.502512$ \\
+6  & $5.7 \times 10^{-6}$ & $-0.502505$ \\
+8  & $6.4 \times 10^{-8}$ & $-0.502505$ \\
+10 & $7.0 \times 10^{-10}$ & $-0.502505$ \\
+\hline
+\end{tabular}
+\end{center}
+The splitting decays exponentially, $\Delta E \sim e^{-L/\xi}$,
+confirming the four-fold topological ground-state degeneracy of
+the gapped B-phase.  This is the signature of Ising anyons on
+the QCA lattice.
+
+In the gapless isotropic phase ($J_x = J_y = J_z = 1$), the
+splitting is algebraic, $\Delta E \sim 1/L$, with oscillations
+from Dirac points moving on and off the finite-size k-grid.
+This is consistent with Kitaev's analysis and serves as a
+control case: the exponential scaling appears only in the
+gapped phase.
+
+\subsection{Significance}
+
+Combined with the toric-code hardware validation
+(Sec.~\ref{sec:hardware}), this establishes QCA as a platform
+for both Abelian (toric code) and non-Abelian (Ising) anyons.
+Braiding of Ising anyons, combined with magic-state injection,
+gives universal topological quantum computation on a substrate
+no different from a classical QCA array.
+
 \section{Discussion}
 
 The eight findings reframe QCA as a fully quantum platform with

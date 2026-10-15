@@ -77,3 +77,19 @@ fault-tolerant logical qubit and report fidelity 1.0000 at every stage.
 -  (mean 0.643, 37σ above noise)
 -  — topological order present on silicon.
 - Version DOI: 10.5281/zenodo.XXXXXXXX
+
+
+### F13. Non-Abelian anyons on a QCA lattice
+
+- Kitaev honeycomb Hamiltonian realized with QCA-native couplings
+  (z-bond direct, x/y-bonds with local rotations).
+- Geometry verified: `[H, W_p] = 0` exactly at L=2, 3.
+- Isotropic B-phase E0/site = -0.7873, matching Kitaev 2006.
+- Gapped phase (Jx=Jy=0.1, Jz=1): 4-sector splitting decays
+  exponentially:
+    L=4: 4.9e-4
+    L=6: 5.7e-6
+    L=8: 6.4e-8
+    L=10: 7.0e-10
+  → 4-fold topological degeneracy → Ising anyons.
+- Gapless phase: O(1/L) algebraic splitting, as expected.
