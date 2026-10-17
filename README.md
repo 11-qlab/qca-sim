@@ -1,3 +1,5 @@
+[![PyPI](https://img.shields.io/pypi/v/qca-sim.svg)](https://pypi.org/project/qca-sim/)
+
 # QCA Quantum
 
 **Quantum-dot Cellular Automata as a native quantum computing platform.**
@@ -30,6 +32,12 @@ N-cell QCA chain is a GHZ state, available for free.
 | F8 | Logical Bell pair at F = 1.0000 | <Z_A Z_B> = <X_A X_B> = +1 |
 
 ## Install
+
+```bash
+pip install qca-sim
+```
+
+Or from source:
 
 ```bash
 git clone https://github.com/11-qlab/qca-quantum
