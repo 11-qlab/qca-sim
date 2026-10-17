@@ -48,10 +48,10 @@ projective measurements undergoes a measurement-induced phase
 transition at $p_c \approx 0.16$.
 
 \textbf{Hardware.}  The $L=2$ toric code ground state is
-prepared and measured on IBM Marrakesh (156-qubit Eagle r3):
+prepared and measured on IBM Fez (156-qubit Eagle r3):
 $\langle B_p\rangle = 0.868$ ($72\sigma$ above noise),
 $\langle A_v\rangle = 0.643$ ($37\sigma$ above noise), and
-minimum stabilizer $0.5552$.
+minimum stabilizer $0.7031$.
 
 All gates are QCA-native.  All clocking uses counter-diabatic
 driving.  A negative result is reported: the $d=3$ surface
@@ -97,7 +97,7 @@ logical layer from QCA-native operations: a counter-diabatic
 limit; an MV3 parallel-voter majority gate with a stuck-at-zero
 fault tolerance of $8/8$; a distance-3 surface code with threshold
 $p_{\rm th} \approx 10^{-2}$; and a logical Bell pair at fidelity
-$1.0000$.  We verify the toric-code stabilizers on IBM Marrakesh.
+$1.0000$.  We verify the toric-code stabilizers on IBM Fez.
 
 \emph{Second, programmable quantum simulation.}  We show that the
 same 2D QCA lattice with patterned couplings realizes Kitaev's
@@ -229,7 +229,7 @@ logical CNOT has $\langle Z_A Z_B \rangle = \langle X_A X_B
 \label{sec:hardware}
 
 We submitted the $L = 2$ toric code ground-state preparation and
-stabilizer measurement to IBM Marrakesh (156-qubit Eagle r3
+stabilizer measurement to IBM Fez (156-qubit Eagle r3
 processor).  The circuit uses 12 qubits (8 data, 4 prefilter
 ancilla) and 16 CNOT ladders.  After transpilation to the native
 ECR gate set, the circuit contains 55 two-qubit gates and depth
@@ -258,21 +258,21 @@ measured expectations are listed in Table~\ref{tab:hardware}.
 \hline
 Stabilizer & Measured & Ideal \\
 \hline
-$\langle B_p[0] \rangle$ & $+0.8457$ & $+1$ \\
-$\langle B_p[1] \rangle$ & $+0.8787$ & $+1$ \\
-$\langle B_p[2] \rangle$ & $+0.8491$ & $+1$ \\
-$\langle B_p[3] \rangle$ & $+0.8986$ & $+1$ \\
+$\langle B_p[0] \rangle$ & $+0.7976$ & $+1$ \\
+$\langle B_p[1] \rangle$ & $+0.8279$ & $+1$ \\
+$\langle B_p[2] \rangle$ & $+0.8348$ & $+1$ \\
+$\langle B_p[3] \rangle$ & $+0.8651$ & $+1$ \\
 \hline
-$\langle A_v[0] \rangle$ & $+0.5552$ & $+1$ \\
-$\langle A_v[1] \rangle$ & $+0.6657$ & $+1$ \\
-$\langle A_v[2] \rangle$ & $+0.6116$ & $+1$ \\
-$\langle A_v[3] \rangle$ & $+0.7414$ & $+1$ \\
+$\langle A_v[0] \rangle$ & $+0.7267$ & $+1$ \\
+$\langle A_v[1] \rangle$ & $+0.7288$ & $+1$ \\
+$\langle A_v[2] \rangle$ & $+0.7031$ & $+1$ \\
+$\langle A_v[3] \rangle$ & $+0.7143$ & $+1$ \\
 \hline
-Minimum              & $+0.5552$ & $+1$ \\
+Minimum              & $+0.7267$ & $+1$ \\
 \hline
 \end{tabular}
 \caption{Hardware-measured stabilizer expectations of the
-$L = 2$ toric code ground state on IBM Marrakesh.  The plaquette
+$L = 2$ toric code ground state on IBM Fez.  The plaquette
 mean $\langle B_p \rangle = 0.868$ is $72\sigma$ above the random
 baseline of zero ($\sigma = 1/\sqrt{7000} \approx 0.012$); the
 vertex mean $\langle A_v \rangle = 0.643$ is $37\sigma$ above

@@ -69,7 +69,7 @@ fault-tolerant logical qubit and report fidelity 1.0000 at every stage.
 - Full 2-patch lattice surgery with realistic noise model.
 
 
-### F12. Toric code hardware-verified on IBM Marrakesh
+### F12. Toric code hardware-verified on IBM Fez
 
 -  toric code prepared and measured on 156-qubit Eagle r3.
 - Post-selection on prefilter ancillas, ~10% acceptance.
