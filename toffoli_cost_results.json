@@ -1,0 +1,11 @@
+{
+  "T_count": 7,
+  "decomposition": {
+    "T": 7,
+    "H": 8,
+    "CNOT": 6,
+    "S": 1,
+    "CZ": 1
+  },
+  "qca_native_total": 75
+}

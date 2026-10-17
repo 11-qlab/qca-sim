@@ -1,0 +1,28 @@
+{
+  "test_A_Zsector": {
+    "no error": 1.0,
+    "X on q0": 1.0,
+    "X on q1": 1.0,
+    "X on q2": 1.0,
+    "X on q3": 1.0,
+    "X on q4": 1.0,
+    "X on q5": 1.0,
+    "X on q6": 1.0,
+    "X on q7": 1.0,
+    "X on q8": 1.0
+  },
+  "test_B_Xsector": {
+    "no error": 1.0,
+    "Z on q0": 1.0,
+    "Z on q1": 1.0,
+    "Z on q2": 1.0,
+    "Z on q3": 1.0,
+    "Z on q4": 1.0,
+    "Z on q5": 1.0,
+    "Z on q6": 1.0,
+    "Z on q7": 1.0,
+    "Z on q8": 1.0
+  },
+  "min": 1.0,
+  "backend": "simulator"
+}
