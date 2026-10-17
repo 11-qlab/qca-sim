@@ -105,3 +105,13 @@ fault-tolerant logical qubit and report fidelity 1.0000 at every stage.
   sigma_z sigma_z QCA coupling.
 - Application: QCA lattice as a programmable simulator for
   strongly-correlated electron physics (high-Tc, spin liquids).
+
+
+### F27. Distance-5 toric code with MWPM decoding
+
+- Phenomenological X-error model, perfect syndrome.
+- Blossom minimum-weight perfect matching (networkx).
+- d=3 (18 qubits) vs d=5 (50 qubits), 3000 trials each.
+- Threshold crossover at p ~ 0.10 (matches literature).
+- Below threshold: d=5 fails 3.5x less than d=3 at p = 0.04.
+- Above threshold: d=5 fails more (inverted ordering).

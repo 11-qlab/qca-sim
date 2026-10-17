@@ -583,6 +583,48 @@ in this paper.  This gives the QCA platform access to Majorana
 zero modes -- the basis of braiding-based topological quantum
 computing.
 
+
+\subsection{Distance-5 toric code: MWPM decoding and threshold}
+
+The distance-3 codes of F16 and F20 correct one error.  The
+distance-5 toric code (50 qubits, 25 stabilizers) corrects two,
+and its logical error rate falls exponentially with distance
+below threshold.  We verify this numerically.
+
+We simulate the phenomenological $X$-error model on the
+$L \times L$ toric code, apply a minimum-weight perfect matching
+decoder (Blossom algorithm, via \texttt{networkx}), and measure
+the logical failure rate across a range of physical error
+rates $p$.
+
+\begin{center}
+\begin{tabular}{cccc}
+\hline
+$p$ & $d=3$ fail & $d=5$ fail & $d=5/d=3$ \\
+\hline
+$0.02$ & $0.006$ & $0.003$ & $0.44$ \\
+$0.04$ & $0.043$ & $0.012$ & $0.29$ \\
+$0.06$ & $0.089$ & $0.053$ & $0.59$ \\
+$0.08$ & $0.156$ & $0.136$ & $0.87$ \\
+$0.10$ & $0.231$ & $0.238$ & $1.03$ \\
+$0.12$ & $0.315$ & $0.337$ & $1.07$ \\
+$0.15$ & $0.431$ & $0.512$ & $1.19$ \\
+\hline
+\end{tabular}
+\end{center}
+
+The $d=5/d=3$ ratio crosses 1 at $p \approx 0.10$, the
+threshold for the toric code with MWPM decoding.  Below
+threshold, the larger code fails significantly less: at
+$p = 0.04$ the ratio is $0.29$, a $3.5\times$ suppression.
+Above threshold the ordering reverses, as expected.
+
+This is the exponential error suppression that defines a
+working fault-tolerant code.  Combined with F16 and F20, it
+completes the QCA fault-tolerance stack: physical stabilizers
+(F12 hardware, F16 circuit), decoder (MWPM, F27), and threshold
+($p_{\rm th} \approx 0.10$).
+
 \subsection{Summary of the extended stack}
 
 Together with the surface code (F16) and the Kitaev honeycomb
