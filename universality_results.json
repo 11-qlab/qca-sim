@@ -1,0 +1,14 @@
+{
+  "su2_closed": true,
+  "H_from_native": true,
+  "S_from_native": true,
+  "T_from_native": true,
+  "CNOT_from_CZ": true,
+  "T_non_clifford": true,
+  "gate_costs": {
+    "H": 3,
+    "S": 1,
+    "T": 1,
+    "CNOT": 7
+  }
+}
